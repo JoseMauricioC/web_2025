@@ -8,15 +8,15 @@
 <body>
     <div>
         <h2>Crear nuevo Artista</h2>
-        <form action="" enctype="multipart/form-data">
+        <form action="insertar.php" method="POST" enctype="multipart/form-data">
             <label for="fotografia">Fotografia:</label>
-            <input type="text" name="fotografia"><br><br>
+            <input type="file" name="fotografia"><br><br>
 
             <label for="nombre">Nombre:</label>
             <input type="text" name="nombre"><br><br>
 
             <label for="nacionalidad">Nacionalidad</label>
-            <input type="text" name="nacionlidad"><br><br>
+            <input type="text" name="nacionalidad"><br><br>
 
             <input type="submit" value="Guardar">
         </form>

@@ -28,7 +28,7 @@
             <td><?php echo $fila['id']; ?></td>
             <td>
                 <?php if ($fila['fotografia']) { ?>
-                    <img src="<?php echo $fila['fotografia']; ?>" width="80">
+                    <img src="<?php echo $fila['fotografia']; ?>" width="200">
                 <?php } else { echo "Sin foto"; } ?>
             </td>
             <td><?php echo $fila['nombre']; ?></td>
