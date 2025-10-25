@@ -7,6 +7,12 @@
 </head>
 <body>
 <div>
+    <?php
+        include('conexion.php');
+
+        $sql = "SELECT *FROM artistas";
+        $result=$con->query($sql);
+    ?>
     <h2>Artistas</h2>
     <a href="crear.php">Crear</a>
     <table border='1'>
@@ -17,14 +23,19 @@
             <th>Nacionalidad</th>
             <th>Acciones</th>
         </tr>
+        <?php while($fila = mysqli_fetch_array($result)) {?>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><?php echo $fila['id']; ?></td>
+            <td>
+                <?php if ($fila['fotografia']) { ?>
+                    <img src="<?php echo $fila['fotografia']; ?>" width="80">
+                <?php } else { echo "Sin foto"; } ?>
+            </td>
+            <td><?php echo $fila['nombre']; ?></td>
+            <td><?php echo $fila['nacionalidad']; ?></td>
             <td> <a href="">Editar</a> <a href="">Eliminar</a></td>
         </tr>
-
+        <?php  }  $con->close();?>
     </table>
 </div>
 </body>
