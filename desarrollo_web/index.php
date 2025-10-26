@@ -33,7 +33,8 @@
             </td>
             <td><?php echo $fila['nombre']; ?></td>
             <td><?php echo $fila['nacionalidad']; ?></td>
-            <td> <a href="">Editar</a> <a href="">Eliminar</a></td>
+            <td> <a href="">Editar</a> <a href="eliminar.php?id=<?php echo $fila['id']; ?>"
+             onclick="return confirm('¿ Deseas Eliminar a <?= $fila['nombre'] ?> ?');">Eliminar</a></td>
         </tr>
         <?php  }  $con->close();?>
     </table>
